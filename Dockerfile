@@ -4,15 +4,12 @@ MAINTAINER Chan Mo <chan.mo@outlook.com>
 COPY sources.list /etc/apt/sources.list
 WORKDIR /app
 
-RUN apt-get update && rm -rf /var/lib/apt/lists/*
-
 # Libreoffce
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository ppa:libreoffice/ppa && \
     apt-get update && \
     apt-get install -y --no-install-recommends libreoffice && \
-    # apt-get install -y libreoffice && \
     apt-get remove -y --auto-remove software-properties-common && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
