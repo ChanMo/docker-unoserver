@@ -21,5 +21,5 @@ http -f POST :5000/convert/pdf file@/path/to/demo.docx -o demo.pdf
 
 If you just want to refresh the TOC in a docx file.
 ```
-http -a POST :5000/convert/docx file@/path/to/demo.docx -o demo.docx
+http -f POST :5000/convert/docx file@/path/to/demo.docx -o demo.docx
 ```

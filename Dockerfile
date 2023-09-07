@@ -1,4 +1,5 @@
 FROM ubuntu:22.04
+MAINTAINER Chan Mo <chan.mo@outlook.com>
 
 COPY sources.list /etc/apt/sources.list
 WORKDIR /app
